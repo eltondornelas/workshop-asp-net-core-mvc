@@ -20,6 +20,10 @@ namespace SalesWebMvc.Services
             return _context.Seller.ToList();
         } //desse formato a operação é sincrona, ou seja, previsa esperar finalizar o processo para prosseguir
 
-
+        public void Insert(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
