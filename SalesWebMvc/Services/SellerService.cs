@@ -21,8 +21,7 @@ namespace SalesWebMvc.Services
         } //desse formato a operação é sincrona, ou seja, previsa esperar finalizar o processo para prosseguir
 
         public void Insert(Seller obj)
-        {
-            obj.Department = _context.Department.First(); //associa com o vendedor o primeiro dado do banco de dados
+        {            
             _context.Add(obj);
             _context.SaveChanges();
         }
